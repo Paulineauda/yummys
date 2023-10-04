@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: '', component: AccueilComponent },
   { path: 'Menu', component: MenuComponent },
   { path: 'reserverTable', component: ReserverTableComponent },
-  { path: '**', redirectTo: '' } // Redirection vers Accueil pour les URL inconnues
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({

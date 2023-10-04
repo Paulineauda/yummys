@@ -1,29 +1,19 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-beige">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
-    <!-- Logo au milieu -->
     <a class="navbar-brand mx-auto" href="#">
       <img src="votre-logo.png" alt="Logo" width="50">
     </a>
 
-    <!-- Bouton de navigation pour les écrans plus petits -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Liens de navigation -->
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav w-100 justify-content-center">
         <li class="nav-item">
-          <a class="nav-link" href="#">Accueil</a>
+          <a class="nav-link" routerLink="/">Accueil</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Services</a>
+          <a class="nav-link" routerLink="/Menu">Menu</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">À propos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" routerLink="/reserverTable">Réserver une table</a>
         </li>
       </ul>
     </div>

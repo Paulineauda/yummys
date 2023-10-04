@@ -9,14 +9,18 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { MenuComponent } from './menu/menu.component';
 import { ReserverTableComponent } from './reserver-table/reserver-table.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
+ footer
+
     AccueilComponent,
     MenuComponent,
     ReserverTableComponent
+ develop
   ],
   imports: [
     BrowserModule,

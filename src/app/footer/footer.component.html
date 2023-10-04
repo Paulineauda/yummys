@@ -1,1 +1,12 @@
-<p>footer works!</p>
+<div class="footer">
+  <button (click)="showModal = true">Contact</button>
+
+  <div class="modal" [class.active]="showModal">
+    <div class="modal-content">
+      <h2>Contactez-nous</h2>
+      <p>Tél: 123-456-7890</p>
+      <p>Adresse: 123 rue de l'exemple</p>
+      <button (click)="showModal = false">Fermer</button>
+    </div>
+  </div>
+</div>

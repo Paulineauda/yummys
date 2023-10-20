@@ -1,1 +1,4 @@
-<p>menu works!</p>
+<div *ngFor="let user of users">
+  <p>ID: {{ user.id }}</p>
+  <p>Nom: {{ user.name }}</p>
+</div>

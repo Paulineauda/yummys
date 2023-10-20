@@ -8,6 +8,14 @@ import { FooterComponent } from './footer/footer.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { MenuComponent } from './menu/menu.component';
 import { ReserverTableComponent } from './reserver-table/reserver-table.component';
+import { createServer } from 'miragejs';
+import {HttpClientModule} from "@angular/common/http";
+import * as data from '../data.json';
+
+type User = {
+  id:number;
+  name:string
+}
 
 @NgModule({
   declarations: [
@@ -20,9 +28,29 @@ import { ReserverTableComponent } from './reserver-table/reserver-table.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor() {
+    setupMirageServer(); // Initialize Mirage server here
+  }
+}
+
+export function setupMirageServer() {
+  createServer({
+    routes() {
+      this.get('api/users', () => {
+        return [
+          {
+            "id" : 1,
+            "name" : "machin"
+          }
+        ];
+      });
+    },
+  });
+}

@@ -1,16 +1,4 @@
-{
-  "users": [
-    {
-      "id": 1,
-      "name": "machin"
-    },
-    {
-      "id": 2,
-      "name": "chose"
-    },
-    {
-      "id": 3,
-      "name": "autre chose"
-    }
-  ]
-}
+[
+  { "id": 1, "name": "Utilisateur 1" },
+  { "id": 2, "name": "Utilisateur 2" }
+]

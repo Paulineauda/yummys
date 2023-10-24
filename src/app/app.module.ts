@@ -36,7 +36,7 @@ type User = {
 })
 export class AppModule {
   constructor() {
-    setupMirageServer(); // Initialize Mirage server here
+    setupMirageServer();
   }
 }
 
@@ -49,6 +49,7 @@ export function setupMirageServer() {
             "id" : 1,
             "name" : "machin"
           }
+
         ];
       });
     },

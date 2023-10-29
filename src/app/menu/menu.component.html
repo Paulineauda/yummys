@@ -1,4 +1,7 @@
-<div *ngFor="let user of users">
-  <p>ID: {{ user.id }}</p>
-  <p>Nom: {{ user.name }}</p>
+<div *ngFor="let team of teams$ | async">
+
+  <h3>{{team.name}}</h3>
+
+  <p>{{team.description}}</p>
+
 </div>

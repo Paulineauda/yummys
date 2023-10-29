@@ -1,7 +1,20 @@
-<div *ngFor="let team of teams$ | async">
-
-  <h3>{{team.name}}</h3>
-
-  <p>{{team.description}}</p>
-
+<h2>Entrées</h2>
+<div *ngFor="let entree of entrees | async">
+  <h3>{{entree.name}}</h3>
+  <p>{{entree.description}}</p>
+</div>
+<h2>Plats</h2>
+<div *ngFor="let plat of plats | async">
+  <h3>{{plat.name}}</h3>
+  <p>{{plat.description}}</p>
+</div>
+<h2>Desserts</h2>
+<div *ngFor="let dessert of desserts | async">
+  <h3>{{dessert.name}}</h3>
+  <p>{{dessert.description}}</p>
+</div>
+<h2>Boissons</h2>
+<div *ngFor="let boisson of boissons | async">
+  <h3>{{boisson.name}}</h3>
+  <p>{{boisson.description}}</p>
 </div>

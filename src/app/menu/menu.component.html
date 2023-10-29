@@ -1,1 +1,7 @@
-<p>menu works!</p>
+<div *ngFor="let team of teams$ | async">
+
+  <h3>{{team.name}}</h3>
+
+  <p>{{team.description}}</p>
+
+</div>

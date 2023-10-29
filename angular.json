@@ -52,11 +52,11 @@
             },
             "development": {
               "buildOptimizer": false,
-              "optimization": false,
-              "vendorChunk": true,
               "extractLicenses": false,
+              "namedChunks": true,
+              "optimization": false,
               "sourceMap": true,
-              "namedChunks": true
+              "vendorChunk": true
             }
           },
           "defaultConfiguration": "production"
@@ -68,7 +68,8 @@
               "browserTarget": "Yummys:build:production"
             },
             "development": {
-              "browserTarget": "Yummys:build:development"
+              "browserTarget": "Yummys:build:development",
+              "proxyConfig": "proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"

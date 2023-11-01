@@ -1,66 +1,127 @@
 {
-
   "entrees": [
     {
       "id": 1,
-      "name": "entrée 1",
-      "type" : "entree",
-      "description": "entrée 1"
+      "name": "Homos",
+      "type": "entree",
+      "description": "Délicieux plat de purée de pois chiches assaisonnée",
+      "price": 7.99,
+      "image": "assets/assiette-chich-taouk.jpg",
+      "quantity": 1
     },
-
     {
       "id": 2,
-      "name": "entrée 2",
-      "type" : "entree",
-      "description": "entrée 2"
+      "name": "Samboussek Fromage",
+      "type": "entree",
+      "description": "Samboussek farci au fromage fondant",
+      "price": 8.99,
+      "image": "assets/assiette-chich-taouk.jpg",
+      "quantity": 1
+    },
+    {
+      "id": 3,
+      "name": "Samboussek Viande",
+      "type": "entree",
+      "description": "Samboussek farci à la viande hachée",
+      "price": 9.99,
+      "image": "assets/assiette-chich-taouk.jpg",
+      "quantity": 1
+    },
+    {
+      "id": 4,
+      "name": "Baba Ghanouj",
+      "type": "entree",
+      "description": "Caviar d'aubergine fumée avec des épices",
+      "price": 7.99,
+      "image": "assets/assiette-chich-taouk.jpg",
+      "quantity": 1
     }
   ],
-
   "plats": [
     {
-      "id": 1,
-      "name": "plat 1",
-      "type" : "plat",
-      "description": "plat 1"
+      "id": 5,
+      "name": "Chich Taouk",
+      "type": "plat",
+      "description": "Poulet mariné et grillé avec des épices",
+      "price": 15.99,
+      "image": "assets/assiette-chich-taouk.jpg",
+      "quantity": 1
     },
     {
-      "id": 2,
-      "name": "plat 2",
-      "type" : "plat",
-      "description": "plat 2"
+      "id": 6,
+      "name": "Chawarma Poulet",
+      "type": "plat",
+      "description": "Viande de poulet grillée avec des légumes",
+      "price": 14.99,
+      "image": "assets/assiette-chich-taouk.jpg",
+      "quantity": 1
+    },
+    {
+      "id": 7,
+      "name": "Brochette Agneau",
+      "type": "plat",
+      "description": "Brochette d'agneau tendre avec des épices",
+      "price": 17.99,
+      "image": "assets/assiette-chich-taouk.jpg",
+      "quantity": 1
     }
   ],
-
   "desserts": [
     {
-      "id": 1,
-      "name": "dessert 1",
-      "type" : "dessert",
-      "description": "dessert 1"
+      "id": 8,
+      "name": "Baklava",
+      "type": "dessert",
+      "description": "Délicieux dessert aux noix et au miel",
+      "price": 6.99,
+      "image": "assets/assiette-chich-taouk.jpg",
+      "quantity": 1
     },
-
     {
-      "id": 2,
-      "name": "dessert 2",
-      "type" : "dessert",
-      "description": "dessert 2"
+      "id": 9,
+      "name": "Halawet",
+      "type": "dessert",
+      "description": "Dessert au riz parfumé au lait et à la rose",
+      "price": 7.99,
+      "image": "assets/assiette-chich-taouk.jpg",
+      "quantity": 1
+    },
+    {
+      "id": 10,
+      "name": "Atayef assafiri",
+      "type": "dessert",
+      "description": "Petites crêpes farcies aux noix et au sirop",
+      "price": 8.99,
+      "image": "assets/assiette-chich-taouk.jpg",
+      "quantity": 1
     }
   ],
-
   "boissons": [
     {
-      "id": 1,
-      "name": "boisson 1",
-      "type" : "boisson",
-      "description": "boisson 1"
+      "id": 11,
+      "name": "Eau plate",
+      "type": "boisson",
+      "description": "",
+      "price": 1.99,
+      "image": "assets/assiette-chich-taouk.jpg",
+      "quantity": 1
     },
-
     {
-      "id": 2,
-      "name": "boisson 2",
-      "type" : "boisson",
-      "description": "boisson 2"
+      "id": 12,
+      "name": "Eau gazeuse",
+      "type": "boisson",
+      "description": "",
+      "price": 2.99,
+      "image": "assets/assiette-chich-taouk.jpg",
+      "quantity": 1
+    },
+    {
+      "id": 13,
+      "name": "Soda",
+      "type": "boisson",
+      "description": "",
+      "price": 3.99,
+      "image": "assets/assiette-chich-taouk.jpg",
+      "quantity": 1
     }
   ]
-
 }

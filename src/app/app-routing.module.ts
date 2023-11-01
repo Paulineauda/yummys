@@ -3,11 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import {AccueilComponent} from "./accueil/accueil.component";
 import {MenuComponent} from "./menu/menu.component";
 import {ReserverTableComponent} from "./reserver-table/reserver-table.component";
+import {PanierComponent} from "./panier/panier.component";
 
 const routes: Routes = [
   { path: '', component: AccueilComponent },
   { path: 'Menu', component: MenuComponent },
   { path: 'reserverTable', component: ReserverTableComponent },
+  { path: 'Panier', component: PanierComponent },
   { path: '**', redirectTo: '' } // Redirection vers Accueil pour les URL inconnues
 ];
 

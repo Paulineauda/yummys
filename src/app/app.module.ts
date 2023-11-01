@@ -8,6 +8,7 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { MenuComponent } from './menu/menu.component';
 import { ReserverTableComponent } from './reserver-table/reserver-table.component';
 import { HttpClientModule } from "@angular/common/http";
+import { PanierComponent } from './panier/panier.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { HttpClientModule } from "@angular/common/http";
     FooterComponent,
     AccueilComponent,
     MenuComponent,
-    ReserverTableComponent
+    ReserverTableComponent,
+    PanierComponent
   ],
   imports: [
     BrowserModule,

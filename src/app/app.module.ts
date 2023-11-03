@@ -9,6 +9,8 @@ import { MenuComponent } from './menu/menu.component';
 import { ReserverTableComponent } from './reserver-table/reserver-table.component';
 import { HttpClientModule } from "@angular/common/http";
 import { PanierComponent } from './panier/panier.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import { SignupComponent } from './signup/signup.component';
 
 
 @NgModule({
@@ -19,13 +21,15 @@ import { PanierComponent } from './panier/panier.component';
     AccueilComponent,
     MenuComponent,
     ReserverTableComponent,
-    PanierComponent
+    PanierComponent,
+    SignupComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        ReactiveFormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

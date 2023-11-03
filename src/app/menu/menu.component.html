@@ -1,7 +1,93 @@
-<div *ngFor="let team of teams$ | async">
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav w-100 justify-content-between">
+        <li class="nav-item">
+          <button type="button" class="btn btn-light"><a class="nav-link" (click)="showEntrees = true; showPlats = false; showDesserts = false; showBoissons = false;">Entrées</a></button>
+        </li>
+        <li class="nav-item">
+          <button type="button" class="btn btn-light"><a class="nav-link" (click)="showEntrees = false; showPlats = true; showDesserts = false; showBoissons = false;">Plats</a></button>
+        </li>
+        <li class="nav-item">
+          <button type="button" class="btn btn-light"><a class="nav-link" (click)="showEntrees = false; showPlats = false; showDesserts = true; showBoissons = false;">Desserts</a></button>
+        </li>
+        <li class="nav-item">
+          <button type="button" class="btn btn-light"><a class="nav-link" (click)="showEntrees = false; showPlats = false; showDesserts = false; showBoissons = true;">Boissons</a></button>
+        </li>
+        <li class="nav-item">
+          <button type="button" class="btn btn-light"><a class="nav-link" routerLink="/Panier">Voir le panier</a></button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br>
+<div class="container-fluid">
+  <div *ngIf="showEntrees">
+    <div class="row">
+      <div class="col-md-3 justify-content-center" *ngFor="let entree of entrees | async">
+        <div class="col">
+        <div class="card" style="width: 18rem;">
+            <img [src]=entree.image class="card-img-top" alt="Image de l'entrée">
+            <div class="card-body">
+              <h5 class="card-title">{{entree.name}}</h5>
+              <p class="card-text">{{entree.description}}</p>
+              <p class="card-text">Prix : {{entree.price}} €</p>
+              <a (click)="panierService.addItemsToCart(entree)" class="btn btn-primary">Ajouter au panier</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+  </div>
 
-  <h3>{{team.name}}</h3>
+  <div *ngIf="showPlats">
+    <div class="row">
+      <div class="col-md-3" *ngFor="let plat of plats | async">
+        <div class="card" style="width: 18rem;">
+          <img [src]="plat.image" class="card-img-top" alt="Image du plat">
+          <div class="card-body">
+            <h5 class="card-title">{{plat.name}}</h5>
+            <p class="card-text">{{plat.description}}</p>
+            <p class="card-text">Prix : {{plat.price}} €</p>
+            <a (click)="panierService.addItemsToCart(plat)" class="btn btn-primary">Ajouter au panier</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <p>{{team.description}}</p>
+  <div *ngIf="showDesserts">
+  <div class="row">
+    <div class="col-md-3" *ngFor="let dessert of desserts | async">
+      <div class="card" style="width: 18rem;">
+        <img [src]="dessert.image" class="card-img-top" alt="Image du dessert">
+        <div class="card-body">
+          <h5 class="card-title">{{dessert.name}}</h5>
+          <p class="card-text">{{dessert.description}}</p>
+          <p class="card-text">Prix : {{dessert.price}} €</p>
+          <a (click)="panierService.addItemsToCart(dessert)" class="btn btn-primary">Ajouter au panier</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
 
+  <div *ngIf="showBoissons">
+  <div class="row">
+    <div class="col-md-3" *ngFor="let boisson of boissons | async">
+      <div class="card" style="width: 18rem;">
+        <img [src]=boisson.image class="card-img-top" alt="Image de la boisson">
+        <div class="card-body">
+          <h5 class="card-title">{{boisson.name}}</h5>
+          <p class="card-text">{{boisson.description}}</p>
+          <p class="card-text">Prix : {{boisson.price}} €</p>
+          <a (click)="panierService.addItemsToCart(boisson)"  class="btn btn-primary">Ajouter au panier</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+</div>
+</body>

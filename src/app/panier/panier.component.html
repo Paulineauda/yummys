@@ -1,0 +1,38 @@
+<body>
+
+<div *ngIf="cartItems.length === 0">
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>Votre panier est vide.</strong>
+  </div>
+</div>
+<div *ngIf="cartItems.length !== 0">
+  <table class="table text-center">
+    <thead>
+    <tr>
+      <th>Produit</th>
+      <th>Prix unitaire</th>
+      <th>Quantité</th>
+      <th>Total</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of cartItems">
+      <td>{{ item.name }}</td>
+      <td>{{ item.price }}</td>
+      <td>{{ item.quantity }}</td>
+      <td>{{ item.price * item.quantity }}</td>
+      <td>
+        <button class="btn btn-success" (click)="panierService.addItemsToCart(item)"><i class="bi bi-plus-circle"></i> Ajouter</button>
+        <button class="btn btn-danger" (click)="panierService.decrementFromCart(item)"><i class="bi bi-dash-circle"></i> Supprimer</button>
+    </tr>
+    <tr>
+      <td>
+        Total : {{totalAmount}}
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <a (click)="panierService.clearCart()" class="btn btn-primary">Vider le panier</a>
+</div>
+</body>

@@ -1,4 +1,3 @@
-/* footer.component.css */
 .footer {
 
   background-color: #333;
@@ -27,7 +26,7 @@
 }
 
 .modal-content {
-  background-color: lightskyblue;
+  background-color: #FFBD59;
   padding: 20px;
   border-radius: 8px;
   width: 80%;
@@ -38,7 +37,7 @@
 button {
   margin-top: 20px;
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #0097B2;
   color: white;
   border: none;
   border-radius: 4px;
@@ -46,7 +45,7 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #0097B2 ;
 }
 
 
@@ -59,3 +58,31 @@ button:hover {
   float: right;
 }
 
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #222;
+  color: #fff;
+  padding: 20px 40px;
+}
+
+.footer-section {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.social-icons i {
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+.stars {
+  font-size: 24px;
+}
+
+.footer-bottom {
+  clear: both;
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #555;
+}

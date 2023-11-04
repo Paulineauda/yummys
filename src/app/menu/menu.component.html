@@ -24,6 +24,11 @@
 </nav>
 <br>
 <div class="container-fluid">
+  <div *ngIf="panierService.AddedPopUpVisible" class="popup">
+    <div class="alert alert-warning" role="alert">
+      Ajouté au panier !
+    </div>
+  </div>
   <div *ngIf="showEntrees">
     <div class="row">
       <div class="col-md-3 justify-content-center" *ngFor="let entree of entrees | async">
@@ -34,7 +39,7 @@
               <h5 class="card-title">{{entree.name}}</h5>
               <p class="card-text">{{entree.description}}</p>
               <p class="card-text">Prix : {{entree.price}} €</p>
-              <a (click)="panierService.addItemsToCart(entree)" class="btn btn-primary">Ajouter au panier</a>
+              <button  id="ajouter-au-panier" (click)="panierService.addItemsToCart(entree)" class="btn button">Ajouter au panier</button>
             </div>
           </div>
         </div>
@@ -51,7 +56,7 @@
             <h5 class="card-title">{{plat.name}}</h5>
             <p class="card-text">{{plat.description}}</p>
             <p class="card-text">Prix : {{plat.price}} €</p>
-            <a (click)="panierService.addItemsToCart(plat)" class="btn btn-primary">Ajouter au panier</a>
+            <a (click)="panierService.addItemsToCart(plat)" class="btn button">Ajouter au panier</a>
           </div>
         </div>
       </div>
@@ -67,7 +72,7 @@
           <h5 class="card-title">{{dessert.name}}</h5>
           <p class="card-text">{{dessert.description}}</p>
           <p class="card-text">Prix : {{dessert.price}} €</p>
-          <a (click)="panierService.addItemsToCart(dessert)" class="btn btn-primary">Ajouter au panier</a>
+          <a (click)="panierService.addItemsToCart(dessert)" class="btn button">Ajouter au panier</a>
         </div>
       </div>
     </div>
@@ -83,7 +88,7 @@
           <h5 class="card-title">{{boisson.name}}</h5>
           <p class="card-text">{{boisson.description}}</p>
           <p class="card-text">Prix : {{boisson.price}} €</p>
-          <a (click)="panierService.addItemsToCart(boisson)"  class="btn btn-primary">Ajouter au panier</a>
+          <a (click)="panierService.addItemsToCart(boisson)"  class="btn button">Ajouter au panier</a>
         </div>
       </div>
     </div>

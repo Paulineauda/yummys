@@ -1,5 +1,4 @@
 <body>
-
 <div *ngIf="cartItems.length === 0">
   <div class="alert alert-warning alert-dismissible fade show" role="alert">
     <strong>Votre panier est vide.</strong>
@@ -7,13 +6,13 @@
 </div>
 <div *ngIf="cartItems.length !== 0">
   <table class="table text-center">
-    <thead>
+    <thead class="table-warning">
     <tr>
       <th>Produit</th>
       <th>Prix unitaire</th>
       <th>Quantité</th>
       <th>Total</th>
-      <th>Action</th>
+      <th>Actions</th>
     </tr>
     </thead>
     <tbody>
@@ -23,16 +22,25 @@
       <td>{{ item.quantity }}</td>
       <td>{{ item.price * item.quantity }}</td>
       <td>
-        <button class="btn btn-success" (click)="panierService.addItemsToCart(item)"><i class="bi bi-plus-circle"></i> Ajouter</button>
-        <button class="btn btn-danger" (click)="panierService.decrementFromCart(item)"><i class="bi bi-dash-circle"></i> Supprimer</button>
+        <button class="btn btn-light" (click)="panierService.addItemsToCart(item)"><i class="bi bi-plus-circle"></i></button>
+        <button class="btn btn-light" (click)="panierService.decrementFromCart(item)"><i class="bi bi-dash-circle"></i></button>
     </tr>
     <tr>
-      <td>
-        Total : {{totalAmount}}
+      <td colspan="5">
+        <strong> Total :</strong> {{totalAmount}} €
       </td>
     </tr>
     </tbody>
   </table>
-  <a (click)="panierService.clearCart()" class="btn btn-primary">Vider le panier</a>
+  <br>
+  <table style="width: 100%">
+    <tbody>
+    <tr>
+      <td style="text-align: center; vertical-align: middle;">
+        <a class="btn button">Commander</a>
+        <a (click)="panierService.clearCart()" class="btn button">Vider le panier</a>
+    </tr>
+    </tbody>
+  </table>
 </div>
 </body>

@@ -7,9 +7,8 @@ import {Router} from "@angular/router";
 })
 export class PanierService {
   cartItems : Product[] = [];
-  alertAdded : boolean = false;
-  alertRemoved : boolean = false;
   totalAmount : number = 0;
+  AddedPopUpVisible = false;
   constructor(private router: Router) {}
 
   addItemsToCart = (product : Product) => {
@@ -19,14 +18,18 @@ export class PanierService {
         this.cartItems[i].quantity++;
         productExists = true;
         this.getTotalAmount();
+        this.AddedPopUpVisible = true;
         break;
       }
     }
     if (!productExists) {
       this.cartItems.push(product);
     }
-    this.alertAdded = true;
+    this.AddedPopUpVisible = true;
     this.getTotalAmount();
+    setTimeout(() => {
+      this.AddedPopUpVisible = false;
+    }, 3000);
   }
 
   getItemsFromCart(): Product[] {
@@ -58,7 +61,6 @@ export class PanierService {
         break;
       }
     }
-    this.alertRemoved = true;
     this.getTotalAmount();
   }
 
@@ -72,6 +74,7 @@ export class PanierService {
     this.totalAmount = totalAmount;
     return totalAmount;
   }
+
 
 
 }

@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <body>
 <div *ngIf="cartItems.length === 0">
   <div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -18,16 +19,16 @@
     <tbody>
     <tr *ngFor="let item of cartItems">
       <td>{{ item.name }}</td>
-      <td>{{ item.price }}</td>
+      <td>{{ item.price }} €</td>
       <td>{{ item.quantity }}</td>
-      <td>{{ item.price * item.quantity }}</td>
+      <td>{{ (item.price * item.quantity).toFixed(2) }} €</td>
       <td>
         <button class="btn btn-light" (click)="panierService.addItemsToCart(item)"><i class="bi bi-plus-circle"></i></button>
         <button class="btn btn-light" (click)="panierService.decrementFromCart(item)"><i class="bi bi-dash-circle"></i></button>
     </tr>
     <tr>
       <td colspan="5">
-        <strong> Total :</strong> {{totalAmount}} €
+        <strong> Total :</strong> {{panierService.getTotalAmount()}} €
       </td>
     </tr>
     </tbody>
@@ -37,8 +38,8 @@
     <tbody>
     <tr>
       <td style="text-align: center; vertical-align: middle;">
-        <a class="btn button">Commander</a>
-        <a (click)="panierService.clearCart()" class="btn button">Vider le panier</a>
+        <a (click)="panierService.commander()" class="btn yellowButton">Commander</a>
+        <a (click)="panierService.clearCart()" class="btn yellowButton">Vider le panier</a>
     </tr>
     </tbody>
   </table>

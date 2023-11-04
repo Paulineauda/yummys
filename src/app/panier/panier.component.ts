@@ -10,7 +10,6 @@ import {PanierService} from "../services/panier.service";
 export class PanierComponent {
 
   cartItems : Product[] = this.panierService.getItemsFromCart();
-  totalAmount: number = this.panierService.getTotalAmount();
 
   constructor(public panierService: PanierService) {}
 }

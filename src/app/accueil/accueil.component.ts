@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import {Observable} from "rxjs";
+import {HttpClient} from "@angular/common/http";
+import {Avis} from "../avis";
 
 @Component({
   selector: 'app-accueil',
@@ -7,4 +10,7 @@ import { Component } from '@angular/core';
 })
 export class AccueilComponent {
 
+  avis: Observable<Avis[]> = this.http.get<Avis[]>('/api/avis');
+
+  constructor(private http: HttpClient){}
 }

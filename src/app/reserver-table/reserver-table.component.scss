@@ -1,7 +1,6 @@
 .reservation-form {
-  font-family: 'Roboto', sans-serif; / Example font /
-/ background: url('C:\Users\belha\Downloads\rut.jpg') no-repeat center center;/
-padding: 50px;
+  font-family: 'Roboto', sans-serif;
+  padding: 50px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
@@ -25,7 +24,7 @@ padding: 50px;
   }
 
   button {
-    background-color: #FFBD59; / This is just an example, adjust as you see fit */
+    background-color: #FFBD59;
   transition: background-color 0.3s;
 
     &:hover {

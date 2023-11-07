@@ -31,6 +31,18 @@
     </section>
 
   </div>
+
+  <div class="col-md-3 justify-content-center" *ngFor="let a of avis | async">
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{a.auteur}}</h5>
+          <p class="card-text">{{a.note}}</p>
+          <p class="card-text"> {{a.commentaire}} </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 </body>

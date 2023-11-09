@@ -3,7 +3,6 @@ import {HttpClient} from "@angular/common/http";
 import {Product} from "../product";
 import {Observable} from "rxjs";
 import {PanierService} from "../services/panier.service";
-import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-menu',

@@ -1,0 +1,24 @@
+{
+  "avis": [
+    {
+      "auteur": "Alice",
+      "note": 4,
+      "commentaire": "J'adore ce restaurant ! La cuisine libanaise est délicieuse, en particulier leurs falafels. L'ambiance est chaleureuse et le personnel est très accueillant."
+    },
+    {
+      "auteur": "Lucas",
+      "note": 5,
+      "commentaire": "Saveurs du Liban est mon restaurant libanais préféré à Paris. La qualité de la nourriture est exceptionnelle, et les prix sont raisonnables. Je recommande vivement le mezze."
+    },
+    {
+      "auteur": "Sophie",
+      "note": 3,
+      "commentaire": "J'ai eu une expérience mitigée lors de ma visite. La nourriture était bonne, mais le service était un peu lent. Cependant, je donne une autre chance à ce restaurant."
+    },
+    {
+      "auteur": "Pierre",
+      "note": 4,
+      "commentaire": "Je suis un habitué de Saveurs du Liban. La qualité est constante, et le décor est charmant. C'est un excellent endroit pour un dîner entre amis."
+    }
+  ]
+}

@@ -1,6 +1,10 @@
 import {Component} from "@angular/core";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {AuthService} from "./auth.service";
+import {HttpClient} from "@angular/common/http";
+import {Observable} from "rxjs";
+import {Avis} from "../avis";
+import {Users} from "../users";
 
 @Component({
   selector: 'app-signup',
@@ -9,12 +13,16 @@ import {AuthService} from "./auth.service";
 export class SignupComponent {
   signUpForm: FormGroup;
 
+  public isConnected : boolean = false;
   constructor(private fb: FormBuilder, private authService: AuthService) {
     this.signUpForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required]
     });
   }
+
+
+
 
   onSubmit() {
     if (this.signUpForm.valid) {

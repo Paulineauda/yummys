@@ -1,3 +1,49 @@
-<div class="main-content">
-  <img id="background-image" src="assets/image-bg-2.jpg">
-</div>
+<body>
+<section class="hero text-center text-black" style="background-image: url('assets/motif4.jpg');">
+<div class="container">
+    <h1 class="display-4" style="font-family: bukhariscript ">Yummy's</h1>
+    <p class="lead" style="font-family: bukhariscript ">Venez manger chez Yummy's !</p>
+    <a href= "#a_propos" class="btn yellowButton btn-lg">À Propos</a>
+  </div>
+</section>
+
+<section id="a_propos" class="about py-5">
+  <div class="container">
+    <h2 class="text-center">À Propos</h2>
+    <section class="about py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h2>Notre Histoire</h2>
+            <p>
+              Depuis 20 ans, Yummys est un pilier de la scène culinaire libanaise à Paris, un lieu emblématique où tradition, saveurs authentiques et hospitalité se rencontrent. Notre histoire commence dans les ruelles animées de Beyrouth, où nos recettes familiales se sont transmises de génération en génération.
+            </p>
+            <h2>Un Cadre Chaleureux</h2>
+            <p>
+              Notre restaurant offre un cadre chaleureux et accueillant, où chaque détail est pensé pour vous transporter dans l'ambiance traditionnelle des souks libanais. Les odeurs des épices, la musique douce et le décor élégant créent une atmosphère où vous vous sentirez comme chez vous.
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <img src="/assets/image-bg-2.jpg" alt="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</section>
+<section>
+  <div class="col-md-3 justify-content-center" *ngFor="let a of avis | async">
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{a.auteur}}</h5>
+          <p class="card-text">{{a.note}}</p>
+          <p class="card-text"> {{a.commentaire}} </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>

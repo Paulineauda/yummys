@@ -2,14 +2,13 @@ import { Injectable } from '@angular/core';
 import {Product} from "../product";
 import {Router} from "@angular/router";
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class PanierService {
   cartItems : Product[] = [];
-  alertAdded : boolean = false;
-  alertRemoved : boolean = false;
-  totalAmount : number = 0;
+  AddedPopUpVisible = false;
   constructor(private router: Router) {}
 
   addItemsToCart = (product : Product) => {
@@ -18,15 +17,17 @@ export class PanierService {
       if (this.cartItems[i].id === product.id) {
         this.cartItems[i].quantity++;
         productExists = true;
-        this.getTotalAmount();
+        this.AddedPopUpVisible = true;
         break;
       }
     }
     if (!productExists) {
       this.cartItems.push(product);
     }
-    this.alertAdded = true;
-    this.getTotalAmount();
+    this.AddedPopUpVisible = true;
+    setTimeout(() => {
+      this.AddedPopUpVisible = false;
+    }, 3000);
   }
 
   getItemsFromCart(): Product[] {
@@ -43,7 +44,6 @@ export class PanierService {
     if (this.cartItems.length === 0) {
       this.router.navigate(['/Menu']);
     }
-    this.getTotalAmount();
   }
 
   decrementFromCart = (product : Product) => {
@@ -54,25 +54,24 @@ export class PanierService {
         } else {
           this.cartItems[i].quantity--;
         }
-        this.getTotalAmount();
         break;
       }
     }
-    this.alertRemoved = true;
-    this.getTotalAmount();
   }
 
-  getTotalAmount(): number {
+  getTotalAmount(): string {
     let totalAmount = 0;
     if (this.cartItems) {
       this.cartItems.forEach((item: Product) => {
         totalAmount += item.quantity * item.price;
       });
     }
-    this.totalAmount = totalAmount;
-    return totalAmount;
+    return totalAmount.toFixed(2);
   }
 
 
+  commander() : void {
+  window.alert("La commande est validée ! Vous pourrez venir la chercher dans une dizaine de minutes.")
+}
 }
 

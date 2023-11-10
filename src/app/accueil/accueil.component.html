@@ -1,10 +1,17 @@
 <body>
 <section class="hero text-center text-black" style="background-image: url('assets/motif4.jpg');">
 <div class="container">
-    <h1 class="display-4" style="font-family: bukhariscript ">Yummy's</h1>
-    <p class="lead" style="font-family: bukhariscript ">Venez manger chez Yummy's !</p>
-    <a href= "#a_propos" class="btn yellowButton btn-lg">À Propos</a>
-  </div>
+    <h1 class="display-4" >Yummy's</h1>
+    <p class="lead" >Venez manger chez Yummy's !</p>
+    <div class="button-group">
+
+      <a href= "#a_propos" class="btn yellowButton btn-lg">À Propos</a>
+      <a href="#avis" class="btn yellowButton btn-lg">Avis des clients</a>
+      <a href="#donnez_avis" class="btn yellowButton btn-lg">Donnez votre avis</a>
+      <a href= "#faq" class="btn yellowButton btn-lg">FAQ</a>
+
+    </div>
+</div>
 </section>
 
 <section id="a_propos" class="about py-5">
@@ -27,23 +34,108 @@
             <img src="/assets/image-bg-2.jpg" alt="" class="img-fluid">
           </div>
         </div>
+        <div class="row mt-4">
+          <div class="col-lg-6">
+            <h3>Philosophie Culinaire</h3>
+            <p>
+              Notre chef, fort de son héritage familial, met un point d'honneur à perpétuer les recettes authentiques du Liban tout en y apportant une touche de modernité. L'innovation dans le respect de la tradition est notre credo.
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <h3>Rencontre avec l'équipe</h3>
+            <p>
+              Une équipe passionnée et dévouée est à votre service chez Yummy's. De nos cuisiniers à notre personnel de salle, chaque membre contribue à l'expérience unique que nous offrons.
+            </p>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-lg-12">
+            <h3>Mot du Chef</h3>
+            <blockquote class="chef-quote">
+              "La cuisine est un art qui se partage et se vit. Chaque plat que nous créons est une invitation au voyage au cœur des saveurs du Moyen-Orient."
+            </blockquote>
+          </div>
+        </div>
       </div>
     </section>
 
   </div>
 </section>
-<section>
-  <div class="col-md-3 justify-content-center" *ngFor="let a of avis | async">
-    <div class="col">
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">{{a.auteur}}</h5>
-          <p class="card-text">{{a.note}}</p>
-          <p class="card-text"> {{a.commentaire}} </p>
+
+<section id="avis" class="reviews-section">
+  <h2 class="reviews-title">Avis des clients</h2>
+  <div class="row">
+    <div class="col-md-3 justify-content-center" *ngFor="let a of avis | async">
+      <div class="review-card">
+        <h5 class="card-title">{{ a.auteur }}</h5>
+        <div class="card-rating">
+          <!-- Representation of the rating, e.g. stars -->
+          <div class="stars">
+            <!-- Your logic to display stars based on the rating -->
+          </div>
+          <p class="rating-number">{{ a.note }}/5</p>
         </div>
+        <p class="card-text">{{ a.commentaire }}</p>
       </div>
     </div>
   </div>
 </section>
+<section id="donnez_avis" class="submit-review-section">
+  <div class="container">
+    <h2 class="submit-review-title">Donnez votre avis</h2>
+    <form class="submit-review-form">
+      <div class="form-group">
+        <label for="username">Nom</label>
+        <input type="text" class="form-control" id="username" placeholder="Entrez votre nom" required>
+      </div>
+      <div class="form-group">
+        <label for="rating">Note</label>
+        <select class="form-control" id="rating" required>
+          <option value="">Sélectionnez une note</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="review">Avis</label>
+        <textarea class="form-control" id="review" rows="3" placeholder="Écrivez votre avis ici" required></textarea>
+      </div>
+      <button type="submit" class="btn submit-btn">Envoyer</button>
+    </form>
+  </div>
+</section>
+
+<section id="faq" class="faq-section">
+  <div class="container">
+    <h2 class="faq-title">Questions Fréquentes</h2>
+    <div class="faq-item">
+      <h3 class="faq-question">Comment puis-je réserver une table ?</h3>
+      <p class="faq-answer">Vous pouvez réserver une table en ligne via notre site web ou par téléphone au 01 23 45 67 89.</p>
+    </div>
+    <div class="faq-item">
+      <h3 class="faq-question">Proposez-vous des options végétariennes ?</h3>
+      <p class="faq-answer">Oui, notre menu propose une sélection de plats végétariens délicieux.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="ask-question-section">
+  <div class="container">
+    <h2 class="ask-question-title">Posez votre question</h2>
+    <form class="ask-question-form">
+      <div class="form-group">
+        <label for="userQuestion">Votre question</label>
+        <textarea class="form-control" id="userQuestion" rows="3" placeholder="Tapez votre question ici..."></textarea>
+      </div>
+      <button type="submit" class="btn submit-btn">Envoyer</button>
+    </form>
+  </div>
+</section>
+
+
 
 </body>

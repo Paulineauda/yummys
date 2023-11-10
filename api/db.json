@@ -2,11 +2,11 @@
   "entrees": [
     {
       "id": 1,
-      "name": "Homos",
+      "name": "Houmous",
       "type": "entree",
       "description": "Délicieux plat de purée de pois chiches assaisonnée",
       "price": 7.99,
-      "image": "assets/assiette-chich-taouk.jpg",
+      "image": "assets/houmous.jpg",
       "quantity": 1
     },
     {
@@ -15,7 +15,7 @@
       "type": "entree",
       "description": "Samboussek farci au fromage fondant",
       "price": 8.99,
-      "image": "assets/assiette-chich-taouk.jpg",
+      "image": "assets/samboussek.jpg",
       "quantity": 1
     },
     {
@@ -24,7 +24,7 @@
       "type": "entree",
       "description": "Samboussek farci à la viande hachée",
       "price": 9.99,
-      "image": "assets/assiette-chich-taouk.jpg",
+      "image": "assets/samboussekviandes.jpg",
       "quantity": 1
     },
     {
@@ -33,7 +33,7 @@
       "type": "entree",
       "description": "Caviar d'aubergine fumée avec des épices",
       "price": 7.99,
-      "image": "assets/assiette-chich-taouk.jpg",
+      "image": "assets/BabaGhanouj.jpg",
       "quantity": 1
     }
   ],
@@ -44,7 +44,7 @@
       "type": "plat",
       "description": "Poulet mariné et grillé avec des épices",
       "price": 15.99,
-      "image": "assets/assiette-chich-taouk.jpg",
+      "image": "assets/chichtaouk.jpg",
       "quantity": 1
     },
     {
@@ -53,7 +53,7 @@
       "type": "plat",
       "description": "Viande de poulet grillée avec des légumes",
       "price": 14.99,
-      "image": "assets/assiette-chich-taouk.jpg",
+      "image": "assets/chawarmapoulet.jpg",
       "quantity": 1
     },
     {
@@ -62,7 +62,7 @@
       "type": "plat",
       "description": "Brochette d'agneau tendre avec des épices",
       "price": 17.99,
-      "image": "assets/assiette-chich-taouk.jpg",
+      "image": "assets/brochetteagneau.jpg",
       "quantity": 1
     }
   ],
@@ -73,7 +73,7 @@
       "type": "dessert",
       "description": "Délicieux dessert aux noix et au miel",
       "price": 6.99,
-      "image": "assets/assiette-chich-taouk.jpg",
+      "image": "assets/baklava.jpg",
       "quantity": 1
     },
     {
@@ -82,7 +82,7 @@
       "type": "dessert",
       "description": "Dessert au riz parfumé au lait et à la rose",
       "price": 7.99,
-      "image": "assets/assiette-chich-taouk.jpg",
+      "image": "assets/halawat.jpg",
       "quantity": 1
     },
     {
@@ -91,7 +91,7 @@
       "type": "dessert",
       "description": "Petites crêpes farcies aux noix et au sirop",
       "price": 8.99,
-      "image": "assets/assiette-chich-taouk.jpg",
+      "image": "assets/atayefassafiri.jpg",
       "quantity": 1
     }
   ],
@@ -102,7 +102,7 @@
       "type": "boisson",
       "description": "",
       "price": 1.99,
-      "image": "assets/assiette-chich-taouk.jpg",
+      "image": "assets/eauplate.jpg",
       "quantity": 1
     },
     {
@@ -111,17 +111,84 @@
       "type": "boisson",
       "description": "",
       "price": 2.99,
-      "image": "assets/assiette-chich-taouk.jpg",
+      "image": "assets/eaugazeuze.jpg",
       "quantity": 1
     },
     {
       "id": 13,
-      "name": "Soda",
+      "name": "Coka-Cola",
       "type": "boisson",
       "description": "",
-      "price": 3.99,
-      "image": "assets/assiette-chich-taouk.jpg",
+      "price": 2.99,
+      "image": "assets/coka.jpg",
       "quantity": 1
+    },
+    {
+      "id": 14,
+      "name": "7up",
+      "type": "boisson",
+      "description": "",
+      "price": 2.99,
+      "image": "assets/7up.jpg",
+      "quantity": 1
+    },
+    {
+      "id": 15,
+      "name": "Oasis",
+      "type": "boisson",
+      "description": "",
+      "price": 2.99,
+      "image": "assets/oasis.jpg",
+      "quantity": 1
+    },
+    {
+      "id": 16,
+      "name": "Pepsi",
+      "type": "boisson",
+      "description": "",
+      "price": 2.99,
+      "image": "assets/pepsi.jpg",
+      "quantity": 1
+    },
+    {
+      "id": 17,
+      "name": "Sprite",
+      "type": "boisson",
+      "description": "",
+      "price": 2.99,
+      "image": "assets/sprite.jpg",
+      "quantity": 1
+    },
+    {
+      "id": 18,
+      "name": "Selecto",
+      "type": "boisson",
+      "description": "",
+      "price": 2.99,
+      "image": "assets/selecto.jpg",
+      "quantity": 1
+    }
+  ],
+  "avis": [
+    {
+      "auteur": "Alice",
+      "note": 4,
+      "commentaire": "J'adore ce restaurant ! La cuisine libanaise est délicieuse, en particulier leurs falafels. L'ambiance est chaleureuse et le personnel est très accueillant."
+    },
+    {
+      "auteur": "Lucas",
+      "note": 5,
+      "commentaire": "Saveurs du Liban est mon restaurant libanais préféré à Paris. La qualité de la nourriture est exceptionnelle, et les prix sont raisonnables."
+    },
+    {
+      "auteur": "Sophie",
+      "note": 3,
+      "commentaire": "J'ai eu une expérience mitigée lors de ma visite. La nourriture était bonne, mais le service était un peu lent. Cependant, je lui donne une autre chance."
+    },
+    {
+      "auteur": "Pierre",
+      "note": 4,
+      "commentaire": "Je suis un habitué de Saveurs du Liban. La qualité est constante, et le décor est charmant. C'est un excellent endroit pour un dîner entre amis."
     }
   ]
 

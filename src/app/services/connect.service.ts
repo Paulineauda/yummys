@@ -12,8 +12,8 @@ export class ConnectService{
 
   constructor(private http: HttpClient) { }
 
-  users: Observable<Users[]> = this.http.get<Users[]>('/api/users');
-  isConnected : boolean = false;
+  private users: Observable<Users[]> = this.http.get<Users[]>('/api/users');
+  public isConnected : boolean = false;
 
   identification(email: string, password: string): boolean {
     this.users.subscribe((usersArray: Users[]) => {

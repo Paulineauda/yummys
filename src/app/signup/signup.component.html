@@ -1,9 +1,5 @@
 <body>
 
-<div class="col-md-3" *ngFor="let user of users | async">
-  <p>{{user.id}}</p>
-</div>
-
 <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
 
   <div class="mb-3">
@@ -15,6 +11,6 @@
     <label for="password" class="form-label">Mot de passe</label>
     <input required type="password" id="password" class="form-control" formControlName="password">
   </div>
-  <button type="submit" class="btn yellowButton">S'inscrire</button>
+  <button type="submit" class="btn yellowButton">Se connecter</button>
 </form>
 </body>

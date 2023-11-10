@@ -25,8 +25,7 @@ export class SignupComponent {
     if (this.signUpForm.valid) {
       const email = this.signUpForm.value.email;
       const password = this.signUpForm.value.password;
-      if (this.connectService.identification(email, password)) {
-        window.alert("connection");
+      if(this.connectService.identification(email, password)){
         return true;
       }
     }

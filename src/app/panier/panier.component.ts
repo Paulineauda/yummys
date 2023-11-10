@@ -10,8 +10,8 @@ import {ConnectService} from "../services/connect.service";
 })
 export class PanierComponent {
 
-  cartItems : Product[] = this.panierService.getItemsFromCart();
-  showConnectModal :  boolean = false;
+  protected cartItems : Product[] = this.panierService.getItemsFromCart();
+  protected showConnectModal :  boolean = false;
 
   constructor(public panierService: PanierService, public connectService: ConnectService) {}
 }

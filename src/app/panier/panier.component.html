@@ -44,14 +44,26 @@
     </tr>
     </tbody>
   </table>
-  <div *ngif="connectService.isConnected">
-  <div class="modal" [class.active]="showConnectModal">
-    <div class="modal-content">
-      <p>Veuillez d'abord vous connecter </p>
-      <button routerLink= "/signup">Se connecter</button>
-    </div>
+
+  <div *ngIf="connectService.isConnected">
+    <div class="modal" [class.active]="showConnectModal">
+      <div class="modal-content">
+        <p>La commande a bien été prise en compte. Vous pourrez venir la chercher dans une dizaine de minutes.</p>
+        <button (click)="showConnectModal = false" class="btn btn-light">Fermer</button>
+      </div>
     </div>
   </div>
+
+  <div *ngIf="!connectService.isConnected">
+    <div class="modal" [class.active]="showConnectModal">
+      <div class="modal-content">
+        <p>Veuillez d'abord vous connecter.</p>
+        <button routerLink="/signup" class="btn btn-light">Se connecter</button>
+        <button (click)="showConnectModal = false" class="btn btn-light">Fermer</button>
+      </div>
+    </div>
+  </div>
+
 </div>
 </body>
 

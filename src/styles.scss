@@ -9,12 +9,17 @@
 body {
   display: flex;
   flex-direction: column;
-  margin-top: 30px;
-  margin-bottom: 70px;
+  margin-top: 1vw;
+  margin-bottom: 5vw;
 }
 
 .yellowButton {
   background-color: #FFBD59;
+}
+
+.yellowButton:active {
+  background-color: #FFBD59;
+  border: 1px solid black;
 }
 
 .right-button {

@@ -1,27 +1,34 @@
-import {Component} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {Product} from "../product";
-import {Observable} from "rxjs";
-import {PanierService} from "../services/panier.service";
+import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Product } from '../product'; // Adjust the path as needed
+import { PanierService } from '../services/panier.service'; // Adjust as needed
+import { MenuService } from './menu.service'; // Adjust the path as needed
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss'],
 })
+export class MenuComponent implements OnInit {
 
-export class MenuComponent{
+  entrees$ !: Observable<Product[]>;
+  plats$!: Observable<Product[]>;
+  desserts$!: Observable<Product[]>;
+  boissons$!: Observable<Product[]>;
 
-  entrees: Observable<Product[]> = this.http.get<Product[]>('/api/entrees');
-  plats: Observable<Product[]> = this.http.get<Product[]>('/api/plats');
-  desserts: Observable<Product[]> = this.http.get<Product[]>('/api/desserts');
-  boissons: Observable<Product[]> = this.http.get<Product[]>('/api/boissons');
+  public showEntrees: boolean = false;
+  public showPlats: boolean = false;
+  public showBoissons: boolean = false;
+  public showDesserts: boolean = false;
 
-  showEntrees: boolean = false;
-  showPlats: boolean = false;
-  showBoissons: boolean = false;
-  showDesserts: boolean = false;
+  constructor(private menuService: MenuService, public panierService: PanierService) {}
 
-  constructor(private http: HttpClient, public panierService: PanierService) {}
+  ngOnInit() {
+    this.entrees$ = this.menuService.getEntrees();
+    this.plats$ = this.menuService.getPlats();
+    this.desserts$ = this.menuService.getDesserts();
+    this.boissons$ = this.menuService.getBoissons();
+  }
 }
+
 

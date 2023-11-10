@@ -3,7 +3,7 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {AuthService} from "./auth.service";
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {Avis} from "../avis";
+import {Avis} from "../accueil/avis";
 import {Users} from "../users";
 
 @Component({

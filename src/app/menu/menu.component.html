@@ -20,6 +20,9 @@
         </li>
       </ul>
     </div>
+    <!--<div>
+      <p> V Menu</p>
+    </div>-->
   </div>
 </nav>
 <br>
@@ -32,7 +35,7 @@
   </div>
   <div *ngIf="showEntrees">
     <div class="row">
-      <div class="col-md-3 justify-content-center" *ngFor="let entree of entrees | async">
+      <div class="col-md-3 justify-content-center" *ngFor="let entree of entrees$ | async">
         <div class="col">
         <div class="card" style="width: 18rem;">
             <img [src]=entree.image class="card-img-top" alt="Image de l'entrée">
@@ -50,7 +53,7 @@
 
   <div *ngIf="showPlats">
     <div class="row">
-      <div class="col-md-3" *ngFor="let plat of plats | async">
+      <div class="col-md-3" *ngFor="let plat of plats$ | async">
         <div class="card" style="width: 18rem;">
           <img [src]="plat.image" class="card-img-top" alt="Image du plat">
           <div class="card-body">
@@ -66,7 +69,7 @@
 
   <div *ngIf="showDesserts">
   <div class="row">
-    <div class="col-md-3" *ngFor="let dessert of desserts | async">
+    <div class="col-md-3" *ngFor="let dessert of desserts$ | async">
       <div class="card" style="width: 18rem;">
         <img [src]="dessert.image" class="card-img-top" alt="Image du dessert">
         <div class="card-body">
@@ -82,7 +85,7 @@
 
   <div *ngIf="showBoissons">
   <div class="row">
-    <div class="col-md-3" *ngFor="let boisson of boissons | async">
+    <div class="col-md-3" *ngFor="let boisson of boissons$ | async">
       <div class="card" style="width: 18rem;">
         <img [src]=boisson.image class="card-img-top" alt="Image de la boisson">
         <div class="card-body">

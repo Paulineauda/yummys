@@ -114,6 +114,7 @@ $fontFamily: 'Open Sans', sans-serif;
     h3 {
       color: #5C3D2E;
       margin-top: 1rem;
+      font-weight: bold;
     }
 
     p {
@@ -309,3 +310,23 @@ $fontFamily: 'Open Sans', sans-serif;
   }
 }
 
+.ret {
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  border: none;
+  transition: all 0.3s ease;
+  justify-content: center;
+
+  .btn {
+    background-color: $baseColor;
+    color: black;
+    margin-top: 5px;
+    &:hover {
+      background-color: darken(#EDD1A1, 10%);
+      color: #FFF;
+    }
+  }
+
+}

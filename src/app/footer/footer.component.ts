@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
 
-  showContactModal: boolean = false;
-  showScheduleModal: boolean = false;
+  public showContactModal: boolean = false;
+  public showScheduleModal: boolean = false;
 }

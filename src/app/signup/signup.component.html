@@ -1,11 +1,39 @@
+<body>
+
 <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
-  <div class="form-group">
-    <label for="email">Email</label>
-    <input type="email" id="email" class="form-control" formControlName="email">
+
+  <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input required type="email" id="email" class="form-control" formControlName="email">
   </div>
-  <div class="form-group">
-    <label for="password">Mot de passe</label>
-    <input type="password" id="password" class="form-control" formControlName="password">
+
+  <div class="mb-3">
+    <label for="password" class="form-label">Mot de passe</label>
+    <input required type="password" id="password" class="form-control" formControlName="password">
   </div>
-  <button type="submit" class="btn btn-primary">S'inscrire</button>
+  <button (click)=showConnectModal() type="submit" class="btn yellowButton">Se connecter</button>
 </form>
+
+<div *ngIf="isConnected">
+  <div class="classiqueModal" [class.active]="connectModalIsVisible">
+    <div class="classiqueModal-content">
+      <button type="button" class="btn-close right-button" aria-label="Close" (click)=hideConnectModal()></button>
+      <p>Vous êtes connecté !</p>
+      <button routerLink="/Menu" class="btn lightButton">Menu</button>
+      <button routerLink="/Panier" class="btn lightButton">Voir le panier</button>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="!isConnected">
+  <div class="classiqueModal" [class.active]="connectModalIsVisible">
+    <div class="classiqueModal-content">
+      <button type="button" class="btn-close right-button" aria-label="Close" (click)=hideConnectModal()></button>
+      <p>Identifiants incorrectes !</p>
+      <button routerLink="/signup" class="btn lightButton" (click)=hideConnectModal()>Réessayer</button>
+      <button routerLink="#" class="btn lightButton">S'inscrire</button>
+    </div>
+  </div>
+</div>
+
+</body>

@@ -2,25 +2,27 @@ import { Injectable } from '@angular/core';
 import {Users} from "../users";
 import {Observable} from "rxjs";
 import {HttpClient} from "@angular/common/http";
+import {Product} from "../product";
+import {Avis} from "../avis";
 
 @Injectable({
   providedIn: 'root'
 })
-export class ConnectService {
+export class ConnectService{
 
-  users: Observable<Users[]> = this.http.get<Users[]>('/api/users');
-  isConnected : boolean = false;
-  Identification(email: string, password: string): boolean {
+  constructor(private http: HttpClient) { }
+
+  private users: Observable<Users[]> = this.http.get<Users[]>('/api/users');
+  public isConnected : boolean = false;
+
+  identification(email: string, password: string): void {
     this.users.subscribe((usersArray: Users[]) => {
-      for (let user of usersArray) {
+      for (let user  of usersArray) {
         if (email === user.email && password === user.password) {
           this.isConnected = true;
           break;
         }
       }
     });
-    return this.isConnected;
   }
-
-  constructor(private http: HttpClient) { }
 }

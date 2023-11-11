@@ -1,1 +1,332 @@
+$baseColor: #EDD1A1;
+$accentColor: #C0A080;
+$textColor: #5C3D2E;
+$lightBackground: #f9f9f9;
+$fontFamily: 'Open Sans', sans-serif;
 
+* {
+  box-sizing: border-box;
+}
+
+
+.hero {
+  padding: 50px 0;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+
+  .container {
+    .button-group {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+
+      .btn {
+        background-color: #EDD1A1;
+        color: #5C3D2E;
+        padding: 15px 30px;
+        font-size: 1.1em;
+        font-weight: bold;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 50px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: darken(#EDD1A1, 10%);
+          box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+  }
+}
+
+.about {
+  background-color: white;
+  padding: 40px 0;
+  font-family: $fontFamily;
+
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+
+    h2 {
+      color: $textColor;
+      margin-bottom: 20px;
+      font-size: 2rem;
+      font-weight: bolder;
+    }
+
+    h2.text-center {
+
+      position: relative;
+      display: inline-block;
+      margin-bottom: 1em;
+
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -10px;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 4px;
+        background-color: $accentColor;
+        border-radius: 2px;
+      }
+
+    }
+
+    p {
+      color: $textColor;
+      font-size: 1rem;
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+
+      .col-lg-6 {
+        width: 50%;
+        padding: 15px;
+
+
+        img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 4px;
+        }
+      }
+    }
+
+
+    h3 {
+      color: #5C3D2E;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    p {
+      color: #555;
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .img-fluid {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .chef-quote {
+      font-style: italic;
+      margin-top: 2rem;
+      padding: 1rem;
+      background-color: #f0f0f0;
+      border-left: 4px solid #C0A080;
+      color: #333;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.reviews-section,
+.submit-review-section {
+  background-color: $lightBackground;
+  padding: 40px 0;
+  font-family: $fontFamily;
+
+  .reviews-title,
+  .submit-review-title {
+    font-size: 1.75em;
+    color: $textColor;
+    text-align: center;
+    margin-bottom: 1.5em;
+    position: relative;
+    font-weight: bolder;
+
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: -10px;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 4px;
+      background-color: $accentColor;
+      border-radius: 2px;
+    }
+  }
+
+  .review-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    margin: 20px auto;
+    padding: 25px;
+    max-width: 350px;
+
+
+    .card-title {
+      font-size: 1.25em;
+      color: $textColor;
+    }
+
+    .card-rating {
+      .stars {
+        color: #ffd700;
+      }
+
+      .rating-number {
+        font-size: 1.1em;
+        color: $accentColor;
+        font-weight: bold;
+      }
+    }
+
+    .card-text {
+      font-size: 1em;
+      color: $textColor;
+      text-align: justify;
+    }
+  }
+}
+
+.submit-review-form {
+  .form-group {
+    label {
+      color: $textColor;
+    }
+
+    .form-control {
+      border: 1px solid darken($lightBackground, 5%);
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+  }
+
+  .submit-btn {
+    background-color: $baseColor;
+    color: black;
+    margin-top: 5px;
+    &:hover {
+      background-color: darken(#EDD1A1, 10%);
+      color: #FFF;
+    }
+  }
+}
+.display-4 {
+  font-family: "Georgia Pro Black";
+  font-weight: bolder;
+  font-size: 80px;
+  color: #5C3D2E ;
+}
+.lead{
+  font-family: "Georgia Pro";
+  font-weight: bold;
+  font-size: 18px;
+  color: #5C3D2E;
+}
+
+.faq-section {
+  background-color: #fff;
+  padding: 2rem 0;
+
+  .container {
+    .faq-title {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      font-weight: bold;
+      position: relative;
+      color: #5C3D2E;
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -10px;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 4px;
+        background-color: $accentColor;
+        border-radius: 2px;
+      }
+    }
+
+    .faq-item {
+      background: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1rem;
+      padding: 1rem;
+      transition: all 0.3s ease;
+
+      &:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .faq-question {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+        color: #5C3D2E;
+      }
+
+      .faq-answer {
+        font-size: 1rem;
+        color: $accentColor;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.ask-question-section {
+  .container{
+    .ask-question-title{
+      color: #5C3D2E;
+    }
+  }
+}
+.submit-btn {
+  background-color: $baseColor;
+  color: black;
+  margin-top: 5px;
+  &:hover {
+    background-color: darken(#EDD1A1, 10%);
+    color: #FFF;
+  }
+}
+
+.ret {
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  border: none;
+  transition: all 0.3s ease;
+  justify-content: center;
+
+  .btn {
+    background-color: $baseColor;
+    color: black;
+    margin-top: 5px;
+    &:hover {
+      background-color: darken(#EDD1A1, 10%);
+      color: #FFF;
+    }
+  }
+
+}

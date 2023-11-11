@@ -15,16 +15,14 @@ export class ConnectService{
   private users: Observable<Users[]> = this.http.get<Users[]>('/api/users');
   public isConnected : boolean = false;
 
-  identification(email: string, password: string): boolean {
+  identification(email: string, password: string): void {
     this.users.subscribe((usersArray: Users[]) => {
-      for (let user of usersArray) {
-        console.log(this.users)
+      for (let user  of usersArray) {
         if (email === user.email && password === user.password) {
           this.isConnected = true;
           break;
         }
       }
     });
-    return this.isConnected;
   }
 }

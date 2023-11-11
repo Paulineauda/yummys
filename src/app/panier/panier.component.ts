@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {Product} from "../product";
 import {PanierService} from "../services/panier.service";
 import {ConnectService} from "../services/connect.service";
@@ -11,7 +11,16 @@ import {ConnectService} from "../services/connect.service";
 export class PanierComponent {
 
   protected cartItems : Product[] = this.panierService.getItemsFromCart();
-  protected showConnectModal :  boolean = false;
+
+  protected commandeModalIsVisible :  boolean = false;
+
+  showCommandeModal():void{
+    this.commandeModalIsVisible = true;
+  }
+
+  hideCommandeModal():void{
+    this.commandeModalIsVisible = false;
+  }
 
   constructor(public panierService: PanierService, public connectService: ConnectService) {}
 }

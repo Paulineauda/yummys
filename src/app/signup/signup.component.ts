@@ -1,8 +1,6 @@
 import {Component} from "@angular/core";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {ConnectService} from "../services/connect.service";
-import {Observable} from "rxjs";
-import {Users} from "../users";
 import {HttpClient} from "@angular/common/http";
 
 @Component({
@@ -11,8 +9,16 @@ import {HttpClient} from "@angular/common/http";
 })
 export class SignupComponent {
 
-  public users: Observable<Users[]> = this.http.get<Users[]>('/api/users');
   public signUpForm: FormGroup;
+
+  protected connectModalIsVisible : boolean = false;
+  showConnectModal():void{
+    this.connectModalIsVisible = true;
+  }
+
+  hideConnectModal():void{
+    this.connectModalIsVisible = false;
+  }
 
   constructor(private fb: FormBuilder, public connectService: ConnectService, private http: HttpClient) {
     this.signUpForm = this.fb.group({
@@ -27,9 +33,10 @@ export class SignupComponent {
       const password = this.signUpForm.value.password;
       if(this.connectService.identification(email, password)){
         return true;
+        console.log("true");
       }
     }
     return false;
+    console.log("false");
   }
-
 }

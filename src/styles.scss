@@ -13,8 +13,18 @@ body {
   margin-bottom: 5vw;
 }
 
+.lightButton {
+  background-color: #f5f5dc;
+  margin: 1vw
+}
+
+.lightButton:active {
+  border: 1px solid black;
+}
+
 .yellowButton {
   background-color: #FFBD59;
+  margin: 1vw
 }
 
 .yellowButton:active {
@@ -26,6 +36,30 @@ body {
   float: right;
 }
 
+.classiqueModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.classiqueModal.active {
+  display: flex;
+}
+
+.classiqueModal-content {
+  background-color: #FFBD59;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+}
 
 
 @import "bootstrap/dist/css/bootstrap.min.css";

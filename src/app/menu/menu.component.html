@@ -4,16 +4,16 @@
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav w-100 justify-content-between">
         <li class="nav-item">
-          <button type="button" class="btn btn-light"><a class="nav-link" (click)="showEntrees = true; showPlats = false; showDesserts = false; showBoissons = false;">Entrées</a></button>
+          <button type="button" class="btn btn-light"><a class="nav-link" (click)="getShowEntrees()">Entrées</a></button>
         </li>
         <li class="nav-item">
-          <button type="button" class="btn btn-light"><a class="nav-link" (click)="showEntrees = false; showPlats = true; showDesserts = false; showBoissons = false;">Plats</a></button>
+          <button type="button" class="btn btn-light"><a class="nav-link" (click)="getShowPlats()">Plats</a></button>
         </li>
         <li class="nav-item">
-          <button type="button" class="btn btn-light"><a class="nav-link" (click)="showEntrees = false; showPlats = false; showDesserts = true; showBoissons = false;">Desserts</a></button>
+          <button type="button" class="btn btn-light"><a class="nav-link" (click)="getShowDesserts()">Desserts</a></button>
         </li>
         <li class="nav-item">
-          <button type="button" class="btn btn-light"><a class="nav-link" (click)="showEntrees = false; showPlats = false; showDesserts = false; showBoissons = true;">Boissons</a></button>
+          <button type="button" class="btn btn-light"><a class="nav-link" (click)="getShowBoissons()">Boissons</a></button>
         </li>
         <li class="nav-item">
           <button type="button" class="btn btn-light"><a class="nav-link" routerLink="/Panier">Voir le panier</a></button>

@@ -11,6 +11,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { PanierComponent } from './panier/panier.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { SignupComponent } from './signup/signup.component';
+import { InscriptionComponent } from './inscription/inscription.component';
 
 
 
@@ -23,7 +24,8 @@ import { SignupComponent } from './signup/signup.component';
     MenuComponent,
     ReserverTableComponent,
     PanierComponent,
-    SignupComponent
+    SignupComponent,
+    InscriptionComponent
   ],
     imports: [
         BrowserModule,

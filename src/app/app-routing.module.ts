@@ -5,6 +5,7 @@ import {MenuComponent} from "./menu/menu.component";
 import {ReserverTableComponent} from "./reserver-table/reserver-table.component";
 import {SignupComponent} from "./signup/signup.component";
 import {PanierComponent} from "./panier/panier.component";
+import {InscriptionComponent} from "./inscription/inscription.component";
 
 const routes: Routes = [
   { path: '', component: AccueilComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'reserverTable', component: ReserverTableComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'Panier', component: PanierComponent },
+  { path: 'Inscription', component: InscriptionComponent },
   { path: '**', redirectTo: '' }
 ];
 

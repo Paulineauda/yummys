@@ -1,9 +1,5 @@
+<body>
 <div class="container mt-4">
-
-  <div *ngIf="inscriptionForm.get('email').hasError('noAt')">
-    L'adresse e-mail doit contenir un "@".
-  </div>
-
 
   <form [formGroup]="inscriptionForm" (ngSubmit)="onSubmit()">
 
@@ -17,14 +13,19 @@
       <input type="text" id="lastName" class="form-control" formControlName="lastName" />
     </div>
 
-
+    <div class="form-group">
       <label for="email">Email</label>
       <input type="email" id="email" class="form-control" formControlName="email" />
+    </div>
 
+    <div class="form-group">
+      <label for="lastName">Mot de passe</label>
+      <input type="text" id="password" class="form-control" formControlName="password" />
+    </div>
 
-
-    <button type="submit" class="btn btn-primary">Envoyer</button>
+    <button type="submit" class="btn yellowButton">S'inscrire</button>
 
   </form>
 
 </div>
+</body>

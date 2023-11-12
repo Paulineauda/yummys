@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {FormBuilder, Validators, ValidatorFn, AbstractControl, FormControl, FormGroup} from "@angular/forms";
+import {FormBuilder, Validators, ValidatorFn, AbstractControl, FormGroup} from "@angular/forms";
 import { Router } from "@angular/router";
 
 function validateEmailWithAt(): ValidatorFn {
@@ -13,9 +13,9 @@ function validateEmailWithAt(): ValidatorFn {
 }
 
 @Component({
-  selector: 'app-contact',
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  selector: 'app-inscription',
+  templateUrl: './inscription.component.html',
+  styleUrls: ['./inscription.component.scss']
 })
 export class InscriptionComponent {
 

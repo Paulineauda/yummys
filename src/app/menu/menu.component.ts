@@ -16,19 +16,39 @@ export class MenuComponent implements OnInit {
   desserts$!: Observable<Product[]>;
   boissons$!: Observable<Product[]>;
 
+  slideImages: string[] = [
+    "assets/baklava.jpg",
+    "assets/chichtaouk.jpg",
+    "assets/atayefassafiri.jpg",
+    'assets/brochetteagneau.jpg',
+    'assets/chawarmapoulet.jpg',
+    'assets/houmous.jpg',
+    'assets/samboussek.jpg',
+    'assets/samboussekviandes.jpg'
+
+  ];
+  currentSlideIndex: number = 0;
+
   public showEntrees: boolean = false;
   public showPlats: boolean = false;
   public showBoissons: boolean = false;
   public showDesserts: boolean = false;
 
-  constructor(private menuService: MenuService, public panierService: PanierService) {}
+  constructor(private menuService: MenuService, public panierService: PanierService) {
+  }
 
   ngOnInit() {
     this.entrees$ = this.menuService.getEntrees();
     this.plats$ = this.menuService.getPlats();
     this.desserts$ = this.menuService.getDesserts();
     this.boissons$ = this.menuService.getBoissons();
+
+    // Slideshow
+    setInterval(() => {
+      this.currentSlideIndex = (this.currentSlideIndex + 1) % this.slideImages.length;
+    }, 4000);
   }
+
 }
 
 

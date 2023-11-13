@@ -25,6 +25,51 @@
     </div>-->
   </div>
 </nav>
+<!--<div class="menu-animation">
+
+  <img src="assets/animlogo.png" alt="Menu Item" class="menu-item-animation">
+</div>-->
+
+<!-- menu.component.html
+
+<div class="slideshow-container">
+  <div class="slide-track" [style.transform]="'translateX(-' + currentSlideIndex * 100 + '%)'">
+    <img *ngFor="let slide of slideImages" [src]="slide" class="slide">
+  </div>
+</div> -->
+
+<!-- menu.component.html -->
+<div class="slideshow-container">
+  <div class="slide-track"
+       [ngStyle]="{'width': (slideImages.length * 100) + '%',
+                   'transform': 'translateX(-' + currentSlideIndex * (100 / slideImages.length) + '%)'}">
+    <img *ngFor="let slide of slideImages" [src]="slide" class="slide">
+  </div>
+</div>
+
+
+
+
+<div class="slideshow-container">
+  <div class="slide fade">
+    <img src="assets/chawarmapoulet.jpg" style="width:100%">
+  </div>
+  <div class="slide fade">
+    <img src="assets/chichtaouk.jpg" style="width:100%">
+  </div>
+  <div class="slide fade">
+    <img src="assets/baklava.jpg" style="width:100%">
+  </div>
+  <div class="slide fade">
+    <img src="assets/halawat.jpg" style="width:100%">
+  </div>
+  <div class="slide fade">
+    <img src="assets/houmous.jpg" style="width:100%">
+  </div>
+  <!-- ... add more slides as needed ... -->
+</div>
+
+
 <br>
 <div class="container-fluid">
   <div *ngIf="panierService.AddedPopUpVisible" class="popup">

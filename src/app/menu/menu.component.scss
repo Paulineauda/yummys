@@ -82,4 +82,65 @@
     }
   }
 }
+/*.menu-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; // Ajustez la hauteur selon vos besoins
+  img.menu-item-animation {
+    width: 500px; // Ajustez la taille selon vos besoins
+    opacity: 0;
+    transform: translatey(20px);
+    animation: slideAndFadeIn 2s ease forwards;
+    padding-top: 50px;
+  }
+}
+
+@keyframes slideAndFadeIn {
+  to {
+    opacity: 1;
+    transform: translatey(0);
+  }
+}
+
+.slideshow-container {
+  overflow: hidden; // Hide the overflow
+  width: 50%;
+  justify-content: center;
+  margin-left: 350px;
+
+}
+
+.slide-track {
+  display: flex;
+  transition: transform 0.5s ease-out; // Smooth transition for the sliding effect
+}
+
+.slide {
+  width: 100%;
+  flex: 0 0 auto; // Prevent the slide from growing or shrinking
+}*/
+.slideshow-container {
+  overflow: hidden;
+  width: 30%;
+  height: 25%;
+  justify-content: center;
+  justify-items: center;
+  margin-left: 550px;
+
+}
+
+.slide-track {
+  display: flex;
+  transition: transform 0.5s ease-out;
+  width: calc(100% * 8); // Replace numberOfSlides with the actual number
+}
+
+.slide {
+  width: calc(100% / 8); // Replace numberOfSlides with the actual number
+  flex-shrink: 0; // Prevent the slides from shrinking
+  justify-content: center;
+
+}
+
 

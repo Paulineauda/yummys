@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<body>
+<div *ngIf="cartItems.length === 0">
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>Votre panier est vide.</strong>
+  </div>
+</div>
+<div *ngIf="cartItems.length !== 0">
+  <table class="table text-center">
+    <thead class="table-warning">
+    <tr>
+      <th>Produit</th>
+      <th>Prix unitaire</th>
+      <th>Quantité</th>
+      <th>Total</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of cartItems">
+      <td>{{ item.name }}</td>
+      <td>{{ item.price }} €</td>
+      <td>{{ item.quantity }}</td>
+      <td>{{ (item.price * item.quantity).toFixed(2) }} €</td>
+      <td>
+        <button class="btn btn-light" (click)="panierService.addItemsToCart(item)"><i class="bi bi-plus-circle"></i>
+        </button>
+        <button class="btn btn-light" (click)="panierService.decrementFromCart(item)"><i class="bi bi-dash-circle"></i>
+        </button>
+    </tr>
+    <tr>
+      <td colspan="5">
+        <strong> Total :</strong> {{panierService.getTotalAmount()}} €
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <br>
+  <table>
+    <tbody>
+    <tr>
+      <td>
+        <button class="btn yellowButton" (click)=showCommandeModal()>Commander</button>
+        <a (click)="panierService.clearCart()" class="btn yellowButton">Vider le panier</a>
+    </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="connectService.isConnected">
+    <div class="classiqueModal" [class.active]="commandeModalIsVisible">
+      <div class="classiqueModal-content">
+        <button type="button" class="btn-close right-button" aria-label="Close" (click)=hideCommandeModal()></button>
+        <br>
+        <p>Votre commande a bien été prise en compte. Vous pourrez venir la chercher dans une dizaine de minutes.</p>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="!connectService.isConnected">
+    <div class="classiqueModal" [class.active]="commandeModalIsVisible">
+      <div class="classiqueModal-content">
+        <button type="button" class="btn-close right-button" aria-label="Close" (click)=hideCommandeModal()></button>
+        <br>
+        <p>Veuillez d'abord vous connecter.</p>
+        <button routerLink="/signup" class="btn lightButton">Se connecter</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+

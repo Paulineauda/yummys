@@ -1,11 +1,11 @@
 import {Component, EventEmitter, Output} from '@angular/core';
 
 @Component({
-  selector: 'app-commande-modal',
-  templateUrl: './commande-modal.component.html',
-  styleUrls: ['./commande-modal.component.scss']
+  selector: 'app-connect-ncmodal',
+  templateUrl: './connect-ncmodal.component.html',
+  styleUrls: ['./connect-ncmodal.component.scss']
 })
-export class CommandeModalComponent {
+export class ConnectNCModalComponent {
   @Output() closeEvent = new EventEmitter<boolean>();
 
   closeModal(value: boolean) {

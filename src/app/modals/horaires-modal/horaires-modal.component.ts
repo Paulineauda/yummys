@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
   selector: 'app-horaires-modal',
@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./horaires-modal.component.scss']
 })
 export class HorairesModalComponent {
-  public showScheduleModal: boolean = false;
+  @Output() closeEvent = new EventEmitter<boolean>();
+
+  closeModal(value: boolean) {
+    this.closeEvent.emit(value);
+  }
 }

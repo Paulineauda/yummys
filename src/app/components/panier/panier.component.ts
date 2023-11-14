@@ -19,8 +19,8 @@ export class PanierComponent {
     this.commandeModalIsVisible = true;
   }
 
-  public hideCommandeModal():void{
-    this.commandeModalIsVisible = false;
+  public closeCommandeModal(bol: boolean) {
+    this.commandeModalIsVisible = bol;
   }
 
   public constructor(public panierService: PanierService, public connectService: ConnectService ) {}

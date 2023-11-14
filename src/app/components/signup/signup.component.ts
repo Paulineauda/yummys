@@ -21,8 +21,8 @@ export class SignupComponent {
     this.connectModalIsVisible = true;
   }
 
-  public hideConnectModal():void{
-    this.connectModalIsVisible = false;
+  public closeConnectModal(bol : boolean):void{
+    this.connectModalIsVisible = bol;
   }
 
   public constructor(private fb: FormBuilder, private http: HttpClient, public connectService: ConnectService) {

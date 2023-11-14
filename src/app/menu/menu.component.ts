@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Product } from '../product'; // Adjust the path as needed
-import { PanierService } from '../services/panier.service'; // Adjust as needed
-import { MenuService } from './menu.service'; // Adjust the path as needed
+import { Product } from '../product';
+import { PanierService } from '../services/panier.service';
+import { MenuService } from '../services/menu.service';
 
 @Component({
   selector: 'app-menu',
@@ -16,39 +16,47 @@ export class MenuComponent implements OnInit {
   desserts$!: Observable<Product[]>;
   boissons$!: Observable<Product[]>;
 
-  slideImages: string[] = [
-    "assets/baklava.jpg",
-    "assets/chichtaouk.jpg",
-    "assets/atayefassafiri.jpg",
-    'assets/brochetteagneau.jpg',
-    'assets/chawarmapoulet.jpg',
-    'assets/houmous.jpg',
-    'assets/samboussek.jpg',
-    'assets/samboussekviandes.jpg'
+  public showEntrees : boolean = false;
+  public showPlats : boolean = false;
+  public showDesserts : boolean = false;
+  public showBoissons : boolean = false;
 
-  ];
-  currentSlideIndex: number = 0;
-
-  public showEntrees: boolean = false;
-  public showPlats: boolean = false;
-  public showBoissons: boolean = false;
-  public showDesserts: boolean = false;
-
-  constructor(private menuService: MenuService, public panierService: PanierService) {
-  }
+  constructor(private menuService: MenuService, public panierService: PanierService) {}
 
   ngOnInit() {
     this.entrees$ = this.menuService.getEntrees();
     this.plats$ = this.menuService.getPlats();
     this.desserts$ = this.menuService.getDesserts();
     this.boissons$ = this.menuService.getBoissons();
-
-    // Slideshow
-    setInterval(() => {
-      this.currentSlideIndex = (this.currentSlideIndex + 1) % this.slideImages.length;
-    }, 4000);
   }
 
+  public getShowEntrees() : void{
+    this.showEntrees = true;
+    this.showPlats = false;
+    this.showDesserts = false;
+    this.showBoissons = false;
+  }
+
+  public getShowPlats() : void{
+    this.showEntrees = false;
+    this.showPlats = true;
+    this.showDesserts = false;
+    this.showBoissons = false;
+  }
+
+  public getShowDesserts() : void{
+    this.showEntrees = false;
+    this.showPlats = false;
+    this.showDesserts = true;
+    this.showBoissons = false;
+  }
+
+  public getShowBoissons() : void{
+    this.showEntrees = false;
+    this.showPlats = false;
+    this.showDesserts = false;
+    this.showBoissons = true;
+  }
 }
 
 

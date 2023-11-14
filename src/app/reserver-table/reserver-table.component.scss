@@ -1,4 +1,4 @@
-.reservation-form {
+/*.reservation-form {
   font-family: 'Roboto', sans-serif;
   padding: 50px;
   border-radius: 8px;
@@ -35,4 +35,131 @@
     color: red;
   }
 
+}*/
+
+// General styles for the reservation form container
+.container {
+  max-width: 600px; // Constrain the form width for better readability
+  margin: 5rem auto; // Center the form in the page with top margin
+  padding: 2rem; // Padding inside the container
+  background-color: #fff; // White background for the form
+  border-radius: 8px; // Rounded corners for the container
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Subtle shadow for depth
+  font-family: 'Roboto', sans-serif; // Consistent font family
 }
+
+// Styles for headings within the form
+h2 {
+  color: #5C3D2E; // Color that matches your website's theme
+  margin-bottom: 1.5rem; // More breathing space below headings
+  text-align: center; // Center-align the heading
+}
+
+// Styles for form elements
+.form-group {
+  margin-bottom: 1rem; // Consistent margin for all form groups
+
+  label {
+    display: block; // Ensure labels are block-level for better control
+    margin-bottom: .5rem; // Space between label and input field
+    color: #5C3D2E; // Color that matches your website's theme
+    font-weight: bold; // Bold font for labels
+  }
+
+  // Input field styles
+  input {
+    width: 100%; // Full width of the container
+    padding: .75rem 1rem; // Comfortable padding inside input fields
+    border: 1px solid #ccc; // Subtle border color
+    border-radius: .25rem; // Slightly rounded borders for input fields
+    transition: border-color .3s, box-shadow .3s; // Smooth transition for focus effect
+
+    &:focus {
+      border-color: #DAA520; // Highlighted border color when input is focused
+      box-shadow: 0 0 0 3px rgba(218,165,32, 0.2); // Glow effect for focused input
+    }
+  }
+
+  // Error state styling
+  &.has-error input {
+    border-color: #d9534f; // Red border for error indication
+    background-color: #f9d6d5; // Light red background for error indication
+  }
+}
+
+// Styles for the submit button
+button[type=button] {
+  width: 100%; // Full width button
+  padding: .75rem; // Comfortable padding
+  background-color: #DAA520; // Button color that stands out
+  color: #fff; // White text for the button
+  border: none; // No border for the button
+  border-radius: .25rem; // Slightly rounded borders for the button
+  font-size: 1rem; // Readable font size
+  font-weight: bold; // Bold font for button text
+  cursor: pointer; // Cursor indication for clickable button
+  transition: background-color .3s; // Smooth transition for hover effect
+
+  &:hover {
+    background-color: darken(#DAA520, 10%); // Darken button on hover
+  }
+}
+
+// Responsive design adjustments
+@media (max-width: 768px) {
+  .container {
+    margin-top: 2rem; // Less margin on smaller screens
+    padding: 1rem; // Less padding on smaller screens
+  }
+}
+
+.modal {
+  display: block; /* Hidden by default; shown when 'showModal' is true */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+  .modal-dialog {
+    position: relative;
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+
+    .modal-content {
+      background-color: #fefefe;
+      border: 1px solid #888;
+      border-radius: 5px;
+
+      .modal-header {
+        padding: 2px 16px;
+        background-color: #5cb85c;
+        color: white;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+
+      .modal-body {padding: 2px 16px;}
+
+      .modal-footer {
+        padding: 2px 16px;
+        background-color: #5cb85c;
+        color: white;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        display: flex;
+        justify-content: flex-end;
+
+        .btn-primary {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
+

@@ -10,7 +10,9 @@ declare var bootstrap: any;
   styleUrls: ['./reserver-table.component.scss']
 })
 export class ReserverTableComponent {
-  reservationForm: FormGroup;
+  public reservationForm: FormGroup;
+  public currentReservation: any = null;
+  public showModal: boolean = false;
 
   constructor(private fb: FormBuilder, private router: Router) { // Injectez Router
     this.reservationForm = this.fb.group({
@@ -23,7 +25,7 @@ export class ReserverTableComponent {
   }
 
 
-  onSubmit() {
+  /*onSubmit() {
     if (this.reservationForm.valid) {
       console.log('Réservation envoyée', this.reservationForm.value);
 
@@ -31,9 +33,22 @@ export class ReserverTableComponent {
 
       this.router.navigate(['/']);
     }
-  }
+  }*/
+
   isInvalid(controlName: string) {
     const control = this.reservationForm.get(controlName);
     return control?.invalid && (control?.dirty || control?.touched);
   }
+
+
+    makeReservation() {
+        if (this.reservationForm.valid) {
+            this.showModal = true; // Show the modal
+        }
+    }
+
+    closeModal() {
+        this.showModal = false; // Hide the modal
+        this.router.navigate(['/']); // Redirect to the home page
+    }
 }

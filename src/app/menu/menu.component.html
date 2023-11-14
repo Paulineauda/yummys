@@ -16,7 +16,11 @@
           <button type="button" class="btn btn-light"><a class="nav-link" (click)="getShowBoissons()">Boissons</a></button>
         </li>
         <li class="nav-item">
-          <button type="button" class="btn btn-light"><a class="nav-link" routerLink="/Panier">Voir le panier</a></button>
+          <button type="button" class="btn btn-light btn-cart">
+            <a class="nav-link" routerLink="/Panier">Voir le panier</a>
+          </button>
+
+          <!--<button type="button" class="btn btn-light"><a class="nav-link" routerLink="/Panier">Voir le panier</a></button>-->
         </li>
       </ul>
     </div>
@@ -38,7 +42,7 @@
   </div>
 </div> -->
 
-<!-- menu.component.html -->
+<!-- menu.component.html
 <div class="slideshow-container">
   <div class="slide-track"
        [ngStyle]="{'width': (slideImages.length * 100) + '%',
@@ -48,6 +52,13 @@
 </div>
 
 
+<div class="slideshow-container">
+  <div class="slide-track"
+       [ngStyle]="{'width': (slideImages.length * 100) + '%',
+                   'transform': 'translateX(-' + currentSlideIndex * (100 / slideImages.length) + '%)'}">
+    <img *ngFor="let slide of slideImages" [src]="slide" class="slide">
+  </div>
+</div>
 
 
 <div class="slideshow-container">
@@ -66,7 +77,13 @@
   <div class="slide fade">
     <img src="assets/houmous.jpg" style="width:100%">
   </div>
-  <!-- ... add more slides as needed ... -->
+
+</div>-->
+
+<div>
+  <p class="wlcm">
+    Au Menu
+  </p>
 </div>
 
 

@@ -2,16 +2,16 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { AccueilComponent } from './accueil/accueil.component';
-import { MenuComponent } from './menu/menu.component';
-import { ReserverTableComponent } from './reserver-table/reserver-table.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { AccueilComponent } from './components/accueil/accueil.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { ReserverTableComponent } from './components/reserver-table/reserver-table.component';
 import { HttpClientModule } from "@angular/common/http";
-import { PanierComponent } from './panier/panier.component';
+import { PanierComponent } from './components/panier/panier.component';
 import {ReactiveFormsModule} from "@angular/forms";
-import { SignupComponent } from './signup/signup.component';
-import { InscriptionComponent } from './inscription/inscription.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { InscriptionComponent } from './components/inscription/inscription.component';
 
 
 

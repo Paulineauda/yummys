@@ -1,27 +1,36 @@
 <body>
 <div class="container mt-4">
 
+  <div *ngIf="isFormSubmitted">
+    <p>L'inscription a bien été effectuée !</p>
+  </div>
+
   <form [formGroup]="inscriptionForm" (ngSubmit)="onSubmit()">
 
     <div class="form-group">
       <label for="firstName">Prénom</label>
-      <input required type="text" id="firstName" class="form-control" formControlName="firstName" />
+      <input type="text" id="firstName" class="form-control" formControlName="firstName" />
+      <div *ngIf="isFieldInvalid('firstName')" class="error-message">Le prénom est requis</div>
     </div>
-
+    <br>
     <div class="form-group">
       <label for="lastName">Nom</label>
       <input type="text" id="lastName" class="form-control" formControlName="lastName" />
+      <div *ngIf="isFieldInvalid('lastName')" class="error-message">Le nom est requis</div>
     </div>
-
+    <br>
     <div class="form-group">
       <label for="email">Email</label>
       <input type="email" id="email" class="form-control" formControlName="email" />
+      <div *ngIf="isEmailInvalid()" class="error-message">L'email est requis et doit être valide</div>
     </div>
-
+    <br>
     <div class="form-group">
-      <label for="lastName">Mot de passe</label>
-      <input type="text" id="password" class="form-control" formControlName="password" />
+      <label for="password">Mot de passe</label>
+      <input type="password" id="password" class="form-control" formControlName="password" />
+      <div *ngIf="isFieldInvalid('password')" class="error-message">Le mot de passe est requis</div>
     </div>
+    <br>
 
     <button type="submit" class="btn yellowButton">S'inscrire</button>
 

@@ -23,7 +23,7 @@ export class InscriptionComponent {
   protected isFormValid : boolean = false;
   protected isSubmitClicked: boolean = false;
 
-  constructor (private fb: FormBuilder, private router: Router) {
+  protected constructor (private fb: FormBuilder, private router: Router) {
     this.inscriptionForm = this.fb.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
@@ -41,6 +41,9 @@ export class InscriptionComponent {
       this.isFormValid = true;
       window.alert('Le formulaire est valide.');
       this.router.navigateByUrl('/');
+    }
+    else{
+      window.alert('Le formulaire est invalide.');
     }
   }
 }

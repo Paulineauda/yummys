@@ -24,8 +24,8 @@ export class AccueilComponent implements OnInit {
 }*/
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { AvisService } from './avis.service'; // Adjust the import path as needed
-import { Avis } from './avis'; // Adjust the import path as needed
+import { AvisService } from '../../services/avis.service';
+import { Avis } from '../../models/avis';
 
 @Component({
   selector: 'app-accueil',
@@ -34,12 +34,12 @@ import { Avis } from './avis'; // Adjust the import path as needed
 })
 export class AccueilComponent implements OnInit {
 
-  avis$!: Observable<Avis[]>; // Notice the '$' convention to denote an Observable
+  protected avis$!: Observable<Avis[]>;
 
-  constructor(private avisService: AvisService) {}
+  protected constructor(private avisService: AvisService) {}
 
-  ngOnInit() {
-    this.avis$ = this.avisService.getAvis(); // Do not subscribe here, just assign the Observable
+  public ngOnInit() {
+    this.avis$ = this.avisService.getAvis();
   }
 }
 

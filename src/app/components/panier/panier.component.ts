@@ -1,8 +1,7 @@
 import {Component} from '@angular/core';
-import {Product} from "../product";
-import {PanierService} from "../services/panier.service";
-import {ConnectService} from "../services/connect.service";
-import {ModalService} from "../services/modal.service";
+import {Product} from "../../models/product";
+import {PanierService} from "../../services/panier.service";
+import {ConnectService} from "../../services/connect.service";
 
 @Component({
   selector: 'app-panier',
@@ -23,5 +22,5 @@ export class PanierComponent {
     this.commandeModalIsVisible = false;
   }
 
-  constructor(public panierService: PanierService, public connectService: ConnectService, public modalService : ModalService) {}
+  protected constructor(public panierService: PanierService, public connectService: ConnectService) {}
 }

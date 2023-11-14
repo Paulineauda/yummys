@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Avis } from './avis'; // adjust the path as necessary
+import { Avis } from '../models/avis'; // adjust the path as necessary
 
 @Injectable({
   providedIn: 'root'

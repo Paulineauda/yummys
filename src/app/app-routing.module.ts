@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {AccueilComponent} from "./accueil/accueil.component";
-import {MenuComponent} from "./menu/menu.component";
-import {ReserverTableComponent} from "./reserver-table/reserver-table.component";
-import {SignupComponent} from "./signup/signup.component";
-import {PanierComponent} from "./panier/panier.component";
-import {InscriptionComponent} from "./inscription/inscription.component";
+import {AccueilComponent} from "./components/accueil/accueil.component";
+import {MenuComponent} from "./components/menu/menu.component";
+import {ReserverTableComponent} from "./components/reserver-table/reserver-table.component";
+import {SignupComponent} from "./components/signup/signup.component";
+import {PanierComponent} from "./components/panier/panier.component";
+import {InscriptionComponent} from "./components/inscription/inscription.component";
 
 const routes: Routes = [
   { path: '', component: AccueilComponent },

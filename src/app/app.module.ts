@@ -12,6 +12,12 @@ import { PanierComponent } from './components/panier/panier.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { SignupComponent } from './components/signup/signup.component';
 import { InscriptionComponent } from './components/inscription/inscription.component';
+import { HorairesModalComponent } from './modals/horaires-modal/horaires-modal.component';
+import { ContactModalComponent } from './modals/contact-modal/contact-modal.component';
+import { CommandeModalComponent } from './modals/commande-modal/commande-modal.component';
+import { CommandeNCModalComponent } from './modals/commande-ncmodal/commande-ncmodal.component';
+import { ConnectModalComponent } from './modals/connect-modal/connect-modal.component';
+import { ConnectNCModalComponent } from './modals/connect-ncmodal/connect-ncmodal.component';
 
 
 
@@ -25,7 +31,13 @@ import { InscriptionComponent } from './components/inscription/inscription.compo
     ReserverTableComponent,
     PanierComponent,
     SignupComponent,
-    InscriptionComponent
+    InscriptionComponent,
+    HorairesModalComponent,
+    ContactModalComponent,
+    CommandeModalComponent,
+    CommandeNCModalComponent,
+    ConnectModalComponent,
+    ConnectNCModalComponent,
   ],
     imports: [
         BrowserModule,

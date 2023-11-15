@@ -51,6 +51,10 @@
     .nav-item:last-child {
       margin-left: auto;
     }
+    .nav-item:nth-child(4) {
+      margin-left: 600px;
+    }
+
   }
 
   .navbar-nav {

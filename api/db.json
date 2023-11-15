@@ -4,11 +4,12 @@
       "id": 1,
       "name": "Houmous",
       "type": "entree",
-      "description": "Délicieux plat de purée de pois chiches assaisonnée",
+      "description": "Délicieux plat de purée.",
       "price": 7.99,
       "image": "assets/houmous.jpg",
       "quantity": 1
     },
+
     {
       "id": 2,
       "name": "Samboussek Fromage",
@@ -31,9 +32,18 @@
       "id": 4,
       "name": "Baba Ghanouj",
       "type": "entree",
-      "description": "Caviar d'aubergine fumée avec des épices",
+      "description": "Caviar d'aubergine fumée.",
       "price": 7.99,
       "image": "assets/BabaGhanouj.jpg",
+      "quantity": 1
+    },
+    {
+      "id": 5,
+      "name": "taboulé",
+      "type": "entree",
+      "description": "Une salade fraîche composée de persil finement haché, de tomates, de menthe, de bulgur (blé concassé), assaisonnée de jus de citron et d'huile d'olive.",
+      "price": 6.99,
+      "image": "assets/taboulé.jpg",
       "quantity": 1
     }
   ],
@@ -64,11 +74,38 @@
       "price": 17.99,
       "image": "assets/brochetteagneau.jpg",
       "quantity": 1
+    },
+    {
+      "id": 8,
+      "name": "Kebbeh",
+      "type": "plat",
+      "description": "C'est une sorte de boulettes de viande hachée.",
+      "price": 7.99,
+      "image": "assets/OIP.jpg",
+      "quantity": 1
+    },
+    {
+      "id": 9,
+      "name": "Kofta",
+      "type": "plat",
+      "description": "Boulettes ou brochettes de viande hachée épicée (agneau, bœuf, ou poulet), souvent grillées et servies avec du riz, des légumes, ou du pain pita.",
+      "price": 17.99,
+      "image": "assets/koftah.jpg",
+      "quantity": 1
+    },
+    {
+      "id": 10,
+      "name": "Freekeh avec poulet",
+      "type": "plat",
+      "description": "Un plat rustique composé de freekeh (blé vert torréfié) cuit avec du poulet, des oignons, et des épices, offrant une saveur fumée distinctive.",
+      "price": 20.99,
+      "image": "assets/fpoulet.jpg",
+      "quantity": 1
     }
   ],
   "desserts": [
     {
-      "id": 8,
+      "id": 11,
       "name": "Baklava",
       "type": "dessert",
       "description": "Délicieux dessert aux noix et au miel",
@@ -77,7 +114,7 @@
       "quantity": 1
     },
     {
-      "id": 9,
+      "id": 12,
       "name": "Halawet",
       "type": "dessert",
       "description": "Dessert au riz parfumé au lait et à la rose",
@@ -86,14 +123,33 @@
       "quantity": 1
     },
     {
-      "id": 10,
+      "id": 13,
       "name": "Atayef assafiri",
       "type": "dessert",
       "description": "Petites crêpes farcies aux noix et au sirop",
       "price": 8.99,
       "image": "assets/atayefassafiri.jpg",
       "quantity": 1
+    },
+    {
+      "id": 15,
+      "name": "Knafeh",
+      "type": "dessert",
+      "description": "Un dessert à base de fromage.",
+      "price": 9.99,
+      "image": "assets/knafeh.jpg",
+      "quantity": 1
+    },
+    {
+      "id": 16,
+      "name": "Ashta",
+      "type": "dessert",
+      "description": "Une sorte de crème cloutée, souvent utilisée comme garniture ou base pour d'autres desserts. Elle est parfois servie avec du miel et des fruits frais.",
+      "price": 9.99,
+      "image": "assets/ashta.jpg",
+      "quantity": 1
     }
+
   ],
   "boissons": [
     {

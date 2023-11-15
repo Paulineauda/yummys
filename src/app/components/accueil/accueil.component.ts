@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { AvisService } from '../services/avis.service';
-import { Avis } from '../Models/avis';
+import { AvisService } from '../../services/avis.service';
+import { Avis } from '../../Models/avis';
 
 @Component({
   selector: 'app-accueil',

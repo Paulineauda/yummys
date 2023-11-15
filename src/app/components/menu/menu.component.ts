@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Product } from '../Models/product';
-import { PanierService } from '../services/panier.service';
-import { MenuService } from '../services/menu.service';
+import { Product } from '../../Models/product';
+import { PanierService } from '../../services/panier.service';
+import { MenuService } from '../../services/menu.service';
 
 @Component({
   selector: 'app-menu',

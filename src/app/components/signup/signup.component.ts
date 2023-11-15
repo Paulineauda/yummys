@@ -2,8 +2,8 @@ import {Component} from "@angular/core";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {Users} from "../Models/users";
-import {ConnectService} from "../services/connect.service";
+import {Users} from "../../Models/users";
+import {ConnectService} from "../../services/connect.service";
 
 @Component({
   selector: 'app-signup',

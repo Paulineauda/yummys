@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
-import {Product} from "../Models/product";
-import {PanierService} from "../services/panier.service";
-import {ConnectService} from "../services/connect.service";
+import {Product} from "../../Models/product";
+import {PanierService} from "../../services/panier.service";
+import {ConnectService} from "../../services/connect.service";
 
 
 @Component({
